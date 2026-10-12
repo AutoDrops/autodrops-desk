@@ -1,0 +1,23 @@
+<!doctype html><html lang="uk"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#0f1115"><title>AutoDrops — Робочий стіл</title>
+<link rel="manifest" href="manifest.webmanifest"><link rel="icon" href="icon-192.png">
+<link rel="stylesheet" href="style.css"></head><body>
+<div id="login" class="login hidden"><div class="card"><h1>AutoDrops</h1><p>Вхід лише для Богдана</p>
+<input id="email" type="email" placeholder="Email"><input id="pass" type="password" placeholder="Пароль">
+<button id="loginBtn" class="primary">Увійти</button><p id="loginErr" class="err"></p></div></div>
+<div id="app" class="layout">
+<aside class="sidebar"><div class="brand">⚙️ AutoDrops</div><nav id="nav"></nav>
+<div class="side-foot"><span id="syncState">Локально</span><button id="exportBtn" class="ghost">Експорт</button><button id="logoutBtn" class="ghost hidden">Вийти</button></div></aside>
+<main><header><h2 id="title"></h2><input id="search" placeholder="Пошук…  ( / )"></header>
+<div id="stats" class="stats"></div><div id="list" class="list"></div></main></div>
+<button id="fab" class="fab" title="Швидке додавання (N або Ctrl+K)">＋</button>
+<div id="qa" class="modal hidden"><div class="sheet"><h3>Швидке додавання</h3>
+<input id="qaInput" placeholder="Напр.: Іваненко Петро 0671234567 НП 12 Київ фара 1500 накладка">
+<div class="row"><span>Розділ:</span><div id="qaSecs" class="chips"></div></div>
+<div id="qaPreview" class="preview"></div>
+<div class="row end"><button id="qaCancel" class="ghost">Скасувати (Esc)</button><button id="qaSave" class="primary">Додати (Enter)</button></div></div></div>
+<div id="ed" class="modal hidden"><div class="sheet"><h3>Редагувати</h3><div id="edForm"></div>
+<div class="row end"><button id="edDel" class="danger">Видалити</button><button id="edCancel" class="ghost">Скасувати</button><button id="edSave" class="primary">Зберегти</button></div></div></div>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="config.js"></script><script src="parse.js"></script><script src="app.js"></script></body></html>
